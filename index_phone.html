@@ -21,14 +21,14 @@
     <script>
 
         window.addEventListener('scroll', () => {
-            if (document.documentElement.scrollTop >= 600) {
+            if (document.documentElement.scrollTop >= 270) {
                 const nav = document.getElementById('navbar');
                 const ul = document.getElementById('navitem');
                 navbar.classList.remove('bg-transparent]');
                 navbar.classList.add('bg-[#14213D]');
                 navitem.classList.remove('text-[#14213D]');
                 navitem.classList.add('text-white');
-                
+
             } else {
                 const nav = document.getElementById('navbar');
                 const ul = document.getElementById('navitem');
@@ -36,12 +36,10 @@
                 navbar.classList.add('bg-transparent');
                 navitem.classList.remove('text-white');
                 navitem.classList.add('text-[#14213D]');
-                
+
             }
         });
     </script>
-
-
 
     <style>
         .swiper {
@@ -67,14 +65,52 @@
             object-fit: cover;
 
         }
+
+        @media screen and (min-width:755px) {
+
+            .wrap01,
+            .wrap02 {
+                display: flex;
+                width: 100%;
+                margin-top: 30px;
+            }
+            .wrap02 {
+                background-color: #fcf1d8;
+            }
+
+            .wrap01_item h3 {
+                margin-top: 25px;
+            }
+
+            .wrap01_item,
+            .wrap02_item {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .wrap02_item ul {
+                display: flex;
+                text-align: center;
+            }
+
+
+            .wrap03,
+            .footer {
+                margin-top: 30px;
+            }
+
+        }
     </style>
+
 
     <title>My Web</title>
 
 </head>
 
 <body>
-    <nav id="navbar" class="fixed  flex top-0 left-0 justify-center z-40 w-full h-[65px] bg-transparent">
+    <nav id="navbar" class="fixed flex top-0 left-0 justify-center z-40 w-full h-[65px] bg-transparent">
         <ul id="navitem" class="flex gap-5 mt-5 fixed text-[#14213D] z-50 text-lg">
             <li>
                 <a href="#首頁">首頁</a>
@@ -92,23 +128,23 @@
                 <a href="#作品精選">作品精選</a>
             </li>
         </ul>
-        
+
     </nav>
-    <div class="relative w-full">
+    <div>
         <img class="opacity-75" src="images/myweb_banner.jpg" alt="">
     </div>
-    <div class="w-full flex flex-row mt-12">
-        <div class="flex-1 ">
-            <h2 id="關於" class="flex justify-center text-[32px] gap-5 m-[32px] font-bold">關於</h2>
-            <div class="ml-[35px]">
-                <h3 class="flex text-2xl font-bold leading-10">林芷銹</h3>
+    <div class="wrap01">
+        <div class="wrap01_item">
+            <h2 id="關於" class="font-semibold text-[28px] text-center mt-[20px]">關於</h2>
+            <div>
+                <h3 class="font-semibold text-[22px] ml-[30px]">林芷銹</h3>
                 <br>
-                <p>喜歡攝影，更樂於挖掘生活中的一切簡單美好事物；喜歡旅遊，更樂於體驗異國文化風情和拓展視野；喜歡學習語言，更樂於交朋友和拓展外交手腕。
+                <p class="p-7 pt-1">喜歡攝影，更樂於挖掘生活中的一切簡單美好事物；喜歡旅遊，更樂於體驗異國文化風情和拓展視野；喜歡學習語言，更樂於交朋友和拓展外交手腕。
                     <br><br>有時喜歡群體活動，有時享受獨自生活，但皆期望在不長的生命中漫長的活著，永恆生命中的每個時刻，如同那一刻的日出與日落。
                 </p>
             </div>
         </div>
-        <div class="flex-1 w-[300px] h-[350px] m-[32px]">
+        <div class="p-5 wrap01_item">
             <div class="swiper mySwiper ml-[2px] rounded-lg">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -127,55 +163,52 @@
             </div>
         </div>
     </div>
-    <div class="mt-12 w-full h-[400px] bg-[#fcf1d8]">
-        <div class="flex">
-            <div class="flex-1">
-                <h2 id="技能" class="flex justify-center text-[32px] pt-[30px] pr-[35px] font-bold">技能</h2>
-                <div class="block pt-[65px]">
-                    <ul class="flex justify-center align-middle ">
+    <div>
+        <div class="wrap02">
+            <div class="wrap02_item">
+                <h2 id="技能" class="font-semibold text-[28px] text-center mt-[25px]">技能</h2>
+                <div>
+                    <ul class="flex justify-center align-middle mt-[20px] ">
                         <li>
                             <div
-                                class="w-[80px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-0.5 text-white">
+                                class="w-[75px] h-[30px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-0.5 text-white">
                                 HTML</div>
                         </li>
                         <li>
                             <div
-                                class="w-[70px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-0.5 text-white">
+                                class="w-[65px] h-[30px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-0.5 text-white">
                                 CSS</div>
                         </li>
                         <li>
                             <div
-                                class="w-[85px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-0.5 text-white">
+                                class="w-[80px] h-[30px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-0.5 text-white">
                                 FIGMA</div>
                         </li>
                     </ul>
+
                     <ul class="flex justify-center">
                         <li>
                             <div
-                                class="w-[110px] h-[40px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-1 text-white">
+                                class="w-[95px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-1 text-white">
                                 網站設計</div>
                         </li>
                         <li>
                             <div
-                                class="w-[110px] h-[40px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-1 text-white">
-                                網頁切版</div>
-                        </li>
-                        <li>
-                            <div
-                                class="w-[110px] h-[40px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-1 text-white">
+                                class="w-[95px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-1 text-white">
                                 行銷企劃</div>
                         </li>
                         <li>
                             <div
-                                class="w-[110px] h-[40px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[20px] pt-1 text-white">
-                                檔期提案</div>
+                                class="w-[95px] h-[35px] bg-[#f3b675] m-4 rounded-lg font-semibold text-center text-[18px] pt-1 text-white">
+                                網頁切版</div>
                         </li>
                     </ul>
+
                 </div>
             </div>
-            <div class="flex-1 w-[300px] h-[350px] pt-[30px]">
-                <h3 id="經驗" class="flex justify-center text-[32px] pr-[30px] font-bold">經驗</h3>
-                <ul class="mt-12 ml-32 leading-10">
+            <div class="m-[23px] pt-0.5 pb-0.5 rounded-xl bg-[#fcf1d8] wrap02_item">
+                <h3 id="經驗" class="font-semibold text-[28px] text-center mt-[25px]">經驗</h3>
+                <ul class="flex flex-col m-5 gap-2 ">
                     <li>
                         <P># 網站設計與切版，請參考作品精選</P>
                     </li>
@@ -183,7 +216,7 @@
                         <P># 活動規劃、檔期提案和月/季目標擬定</P>
                     </li>
                     <li>
-                        <P># 協助客戶運營跨境平台上之店舖，外銷商品</P>
+                        <P># 協助客戶推廣品牌和商品至國外市場</P>
                     </li>
                     <li>
                         <P># 文案中德翻譯與優化</P>
@@ -193,11 +226,12 @@
         </div>
 
     </div>
-    <div class="h-screen">
-        <h2 id="作品精選" class="flex justify-center text-[32px] gap-5 m-[32px] font-bold">作品精選</h2>
+    <div class="wrap03">
+        <h2 id="作品精選" class="font-semibold text-[28px] text-center mt-[25px]">作品精選</h2>
     </div>
-    <div class="w-full h-[200px] bg-slate-300">
-    </div>
+
+    <div class="footer w-full h-16 bg-slate-300"></div>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
